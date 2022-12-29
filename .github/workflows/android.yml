@@ -32,13 +32,13 @@ jobs:
 
     steps:
     - name: Download APK
-      uses: actions/download-artifact@v1.3.3
+      uses: actions/download-artifact@v2.0.5
       id: download
       with:
         name: app
         path: ./
     - name: Distribute to App Center
-      uses: wzieba/AppCenter-Github-Action@v2.12.0
+      uses: wzieba/AppCenter-Github-Action@v1.3.3
       with:
         appName: TestingCD/TestingCD
         token: ${{secrets.APP_CENTER_TOKEN}}
